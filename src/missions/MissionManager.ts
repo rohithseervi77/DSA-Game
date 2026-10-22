@@ -117,7 +117,7 @@ export class NexusMissionManager {
     const emergency: Mission = {
       id: `EMERGENCY_${Date.now().toString().slice(-4)}`,
       title: "🚨 PRIORITY OVERRIDE: Conduit Cascade",
-      sectorTargetId,
+      sectorTargetId: targetSectorId,
       description: "Critical conduit rupture detected! Reconnect sector grid using Minimum Spanning Tree before quantum collapse.",
       rewardEnergy: 80,
       rewardBandwidth: 50,

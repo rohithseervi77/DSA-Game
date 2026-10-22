@@ -104,7 +104,7 @@ export class NexusGraph {
 
   getAllEdges(): ConduitEdge[] {
     const edgeMap = new Map<string, ConduitEdge>();
-    for (const edges of this.adjacencyList.values()) {
+    for (const edges of Array.from(this.adjacencyList.values())) {
       for (const e of edges) {
         // Keep unique undirected edges by sorted key
         const key = [e.source, e.target].sort().join("<->");
